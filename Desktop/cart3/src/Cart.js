@@ -27,12 +27,50 @@ class Cart extends React.Component {
       ],
     };
   }
+
+  handleIncreaseQuantity = (product) => {
+    console.log("Hey please increase the quantity of the product", product);
+    const { products } = this.state;
+    const index = products.indexOf(product);
+    products[index].qty += 1;
+    this.setState({
+      products,
+    });
+  };
+  handleDecreaseQuantity = (product) => {
+    console.log("Hey please decrease the quantity of the product", product);
+    const { products } = this.state;
+    const index = products.indexOf(product);
+    if (products[index].qty == 0) {
+      return;
+    }
+    products[index].qty -= 1;
+    this.setState({
+      products,
+    });
+  };
+
+  handleDeleteproduct = (id) => {
+    const { products } = this.state;
+    const items = products.filter((item) => item.id !== id);
+    this.setState({
+      products: items,
+    });
+  };
   render() {
     const { products } = this.state;
     return (
       <div className="cart">
         {products.map((product) => {
-          return <CartItem product={product} key={product.id} />;
+          return (
+            <CartItem
+              product={product}
+              key={product.id}
+              onIncreaseQunatity={this.handleIncreaseQuantity}
+              onDecreaseQunatity={this.handleDecreaseQuantity}
+              onDeleteProduct={this.handleDeleteproduct}
+            />
+          );
         })}
       </div>
     );
