@@ -1,0 +1,95 @@
+.chat-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-thread {
+  width: 100%;
+  height: 755px;
+  overflow-y: auto;
+  border: 1px solid #c7c7c7;
+  padding: 10px;
+  background-color: #e8e8e8;
+}
+
+.chat-message-container {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 0 20px 20px 20px;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.chat-message-content {
+  flex: 1;
+}
+
+.like-button {
+  margin-left: 10px;
+}
+
+.chat-input {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  height: 30px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  margin-left: 10px;
+  width: 7%;
+  height: 45px;
+}
+
+.like-button {
+  width: auto;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+.like-button :hover {
+  background-color: #007bff;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+.user-item {
+  padding: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.user-item:hover {
+  background-color: #ccbcbc;
+}
